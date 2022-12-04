@@ -1,11 +1,11 @@
-# Laravel Nova Password Reset
+# Laravel Nova Reset Password
 
 Easily reset your Nova password from you dashboard.
 
 
-## Screeenshots
+## Screenshots
 
-![Laravel Nova Password Reset](https://raw.githubusercontent.com/mastani/nova-password-reset/master/screenshot.jpg "Laravel Nova Password Reset")
+![Laravel Nova Password Reset](https://raw.githubusercontent.com/websnack-dk/nova-password-reset/main/preview-nova-reset-password.png "Laravel Nova Reset Password")
 
 ## Requirements
 
