@@ -1,25 +1,26 @@
-# Laravel Nova Reset Password
+# Laravel Nova 4 - Reset Password
 
-Easily reset your Nova password from you dashboard.
+Easily reset your password from dashboard on Nova 4.
 
 
-## Screenshots
+## Screenshot
 
-![Laravel Nova Password Reset](https://raw.githubusercontent.com/websnack-dk/nova-password-reset/main/preview-nova-reset-password.png "Laravel Nova Reset Password")
+![Laravel Nova Password Reset](preview-nova-reset-password.png "Laravel Nova Reset Password")
 
 ## Requirements
 
-* PHP 8.0
-* [Laravel](https://laravel.com/) application with [Laravel Nova](https://nova.laravel.com/) installed
+* PHP ~8.0
+* [Laravel](https://laravel.com) 
+* [Laravel Nova 4](https://nova.laravel.com)
 
 ### Installation
 
-Install the package via composer:
+Install package via composer:
 ```bash
 composer require websnack/password-reset
 ```
 
-Register the tool in the `tools` method of the `NovaServiceProvider`:
+Register tool in `tools` method of the `NovaServiceProvider`:
 ```php
 
 // in app/Providers/NovaServiceProvider.php
@@ -36,22 +37,24 @@ public function tools()
 }
 ```
 
-## Customizations (Optional)
+### Configuration
 
-If you want to specify the min password length, or decide where the url should show, you can publish the config file:
+Export config file to change position settings or minimum password length 
+
 ```
 php artisan vendor:publish --tag="nova-reset-password-config"
 ```
 
-Edit `config/nova-password-reset.php` and change desired value:
-```
-'min_password_length' => 8
+Open and edit file `config/nova-password-reset.php`
 
-'show_on_sidebar' => true,
+```php
+'min_password_length'   => 8
 
-'show_on_profile_menu' => true,
+'show_on_sidebar'       => true,
+
+'show_on_profile_menu'  => true,
 ```
 ___
 
-## Contributors
-[Websnack](https://github.com/websnack-dk)
+## Contributor
+[Websnack](https://websnack.dk)
