@@ -37,6 +37,25 @@ public function tools()
 }
 ```
 
+### Usage
+
+After installation, you can find the tool in the sidebar of admin panel dashboard.
+if you have added a custom userMenu you have to manuel add the link to the tool like shown below.
+
+```php
+
+// in app/Providers/NovaServiceProvider.php
+
+Nova::userMenu(static function (Request $request, Menu $menu) {
+    return $menu
+    
+    // ...
+        ->append(MenuItem::externalLink('Reset Password', '/reset-password'))
+        
+}),
+```
+
+
 ### Configuration
 
 Export config file to change position settings or minimum password length 
