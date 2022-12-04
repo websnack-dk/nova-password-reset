@@ -19,7 +19,7 @@ class ToolServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-         __DIR__ . '/../config/nova-password-reset.php' => config_path('nova-password-reset.php'),
+            __DIR__.'/../config/nova-password-reset.php' => config_path('nova-password-reset.php'),
         ], 'nova-reset-password-config');
 
         $this->app->booted(function () {
@@ -31,7 +31,6 @@ class ToolServiceProvider extends ServiceProvider
                 'minPasswordLength' => config('nova-password-reset.min_password_length'),
             ]);
         });
-
     }
 
     /**

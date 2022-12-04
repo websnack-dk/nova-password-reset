@@ -34,7 +34,7 @@ class ResetPassword extends Tool
     /**
      * Build the menu that renders the navigation links for the tool.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
     public function menu(Request $request): mixed
@@ -44,10 +44,10 @@ class ResetPassword extends Tool
                 ->path('/reset-password')
                 ->icon('key');
         }
+
         return null;
     }
-    
-    
+
     /*
     |--------------------------------------------------------------------------
     | Methods
@@ -56,11 +56,11 @@ class ResetPassword extends Tool
 
     public function resetPassword(ResetPasswordRequest $request): \Illuminate\Http\JsonResponse
     {
-        $user               = $request->user();
-        $currentPassword    = $request->get('current_password');
-        $newPassword        = $request->get('password');
+        $user = $request->user();
+        $currentPassword = $request->get('current_password');
+        $newPassword = $request->get('password');
 
-        if (!Hash::check($currentPassword, $user->password)) {
+        if (! Hash::check($currentPassword, $user->password)) {
             return response()->json(['message' => 'The current password is incorrect.'], 403);
         }
 
@@ -69,6 +69,4 @@ class ResetPassword extends Tool
 
         return response()->json(['message' => 'Password changed successfully.'], 200);
     }
-    
-    
 }
