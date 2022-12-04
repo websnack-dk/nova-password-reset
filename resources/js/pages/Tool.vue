@@ -135,7 +135,6 @@ export default {
             }
 
             if (this.password.trim().length > this.min_password_length) {
-                console.log('not long enough')
                 Nova.error('The password must be at least ' + this.min_password_length + ' characters.');
                 return false;
             }
@@ -160,6 +159,8 @@ export default {
                     this.password_confirmation = '';
 
                     Nova.success('Password updated successfully');
+                }).catch((error) => {
+                    Nova.error(error.response.data.message);
                 });
         }
     }
