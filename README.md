@@ -3,9 +3,9 @@
 Easily reset your password from dashboard on Nova 4.
 
 
-## Screenshot
+## Screenshot preview 
 
-![Laravel Nova Password Reset](preview-nova-reset-password.png "Laravel Nova Reset Password")
+![Laravel Nova Password Reset](preview-nova-reset-password.png "Laravel Nova 4 - Reset Password")
 
 ## Requirements
 
