@@ -57,4 +57,5 @@ Open and edit file `config/nova-password-reset.php`
 ___
 
 ## Contributor
-[Websnack](https://websnack.dk)
+* [Websnack](https://websnack.dk)
+* [Websnack Github](https://github.com/websnack-dk)
