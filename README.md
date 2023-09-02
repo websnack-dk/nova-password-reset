@@ -15,11 +15,6 @@ Easily reset your password from dashboard on Nova 4.
 
 ### Installation
 
-Install package via composer:
-```bash
-composer require websnack/password-reset
-```
-
 Register tool in `tools` method of the `NovaServiceProvider`:
 ```php
 
